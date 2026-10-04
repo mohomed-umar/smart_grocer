@@ -1,0 +1,410 @@
+/* =====================================================
+   CONTAINER
+   Purpose:
+   - Wraps page content
+   - Keeps content centered
+   - Prevents too-wide layouts on large screens
+   ===================================================== */
+.container {
+    width: 100%;              /* Take full available width of screen */
+    max-width: 1200px;        /* Limit width on large displays */
+    margin: 0 auto;           /* Center container horizontally */
+}
+
+/* =====================================================
+   CONTACT PAGE SECTION
+   Purpose:
+   - Main wrapper for Contact page content
+   ===================================================== */
+.contact-section {
+  background-color: #fff;     /* White background for clean look */
+  margin-top: 120px;          /* Push content below fixed header */
+  /* padding intentionally disabled */
+}
+
+
+/* =====================================================
+   SOCIAL LINKS (TEXT ICON STYLE)
+   Purpose:
+   - Social icons (font icons / text icons)
+   ===================================================== */
+.social-links a {
+    color: white;             /* Icon/text color */
+    margin-right: 15px;       /* Space between icons */
+    font-size: 1.2rem;        /* Icon size */
+    transition: 0.3s;         /* Smooth hover animation */
+}
+
+/* Social link hover effect */
+.social-links a:hover {
+    color: #ffeb3b;           /* Yellow hover color */
+}
+
+/* =====================================================
+   CONTACT PAGE HEADING
+   ===================================================== */
+.contact-section h2 {
+  text-align: center;         /* Center heading */
+  color: #1e88e5;             /* Blue color */
+  font-size: 2.5rem;          /* Large heading size */
+  margin-bottom: 10px;        /* Space below heading */
+}
+
+/* =====================================================
+   CONTACT PAGE PARAGRAPH
+   ===================================================== */
+.contact-section p {
+  text-align: center;         /* Center paragraph */
+  color: #555;                /* Soft gray text */
+  margin-bottom: 40px;        /* Space below paragraph */
+  font-size: 1.1rem;          /* Readable text size */
+}
+
+/* =====================================================
+   CONTACT GRID
+   Purpose:
+   - Layout for contact form / info
+   ===================================================== */
+.contact-grid {
+  display: grid;              /* Enable CSS Grid */
+  gap: 30px;                  /* Space between grid items */
+}
+
+/* =====================================================
+   CONTACT FORM CARD
+   ===================================================== */
+.contact-form {
+  background: #f4f4f4;        /* Light gray background */
+  padding: 30px;              /* Inner spacing */
+  border-radius: 10px;        /* Rounded corners */
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1); /* Soft shadow */
+}
+
+/* =====================================================
+   CONTACT FORM LABELS
+   ===================================================== */
+.contact-form label {
+  display: block;             /* Each label on new line */
+  margin-bottom: 8px;         /* Space below label */
+  color: #333;                /* Dark readable text */
+  font-weight: 500;           /* Medium bold */
+}
+
+/* =====================================================
+   CONTACT INPUTS & TEXTAREA
+   ===================================================== */
+.contact-form input,
+.contact-form textarea {
+  width: 90%;                /* Full width fields */
+  padding: 10px;              /* Inner padding */
+  margin-bottom: 20px;        /* Space between fields */
+  border: 1px solid #ccc;     /* Light border */
+  border-radius: 5px;         /* Rounded edges */
+  font-size: 1rem;            /* Normal text size */
+}
+
+/* =====================================================
+   BODY
+   Purpose:
+   - Global page background
+   ===================================================== */
+body{
+  background-color: white;    /* White page background */
+}
+
+/* =====================================================
+   HEADER (FIXED NAVBAR)
+   Purpose:
+   - Top navigation bar
+   ===================================================== */
+.header {
+    background: linear-gradient(135deg, #2d6a4f 0%, #52b788 100%); /* Green gradient header background */
+    padding: 0.5rem 0;        /* Vertical padding */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Shadow */
+    z-index: 100;             /* Stay above other elements */
+    margin-left: -8px;        /* Browser default margin fix */
+    width: 100%;              /* Full width */
+    position: fixed;          /* Always stay on top */
+    top: 0;                   /* Stick to top */
+}
+
+/* =====================================================
+   HEADER INNER CONTAINER
+   Purpose:
+   - Align logo left & nav right
+   ===================================================== */
+.header .container {
+    display: flex;            /* Flex layout */
+    justify-content: space-between; /* Push items apart */
+    align-items: center;      /* Vertical center */
+}
+
+/* =====================================================
+   LOGO TEXT
+   ===================================================== */
+.logo{
+    font-weight: bold;        /* Bold brand text */
+    color: White;             /* White text */
+    text-decoration: none;    /* Remove underline */
+    cursor: pointer;          /* Hand cursor */
+    font-size: 1.5rem;        /* Logo text size */
+}
+
+/* =====================================================
+   SITE LOGO IMAGE (CIRCULAR)
+   ===================================================== */
+.site-logo {
+    width: 100px;             /* Image width */
+    height: 100px;            /* Image height */
+    object-fit: cover;        /* Prevent image distortion */
+    border-radius: 50%;       /* Make image circular */
+    border: 2px solid white;  /* White border */
+}
+
+/* =====================================================
+   NAVBAR LINKS
+   Purpose:
+   - Top navigation menu items
+   ===================================================== */
+.navbar a{
+    margin: 0 15px;            /* Space between each menu link */
+    text-decoration: none;     /* Remove underline */
+    color: white;              /* White text on green header */
+    font-size: 1rem;           /* Normal readable size */
+    display: inline;           /* Inline layout */
+}
+
+/* Navbar hover effect */
+.navbar a:hover {
+    color: #2E8B57;            /* Dark green hover color */
+}
+
+/* =====================================================
+   HERO SECTION
+   Purpose:
+   - Large banner section at top of Home page
+   - Displays background image with text overlay
+   ===================================================== */
+.hero {
+    background: url('Images/Home.jpg') no-repeat center center/cover;
+    /* no-repeat → image not tiled
+       center center → image centered
+       cover → image fills entire section */
+
+    color: #fff;               /* Default text color */
+    text-align: center;        /* Center text */
+    padding: 100px 20px;
+    margin-top: 74px;       /* Space around content */
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+/* Hero main heading */
+.hero h1 {
+    font-size: 3rem;           /* Large title text */
+    font-weight:bold;          /* Bold heading */
+    margin-bottom: 0.5rem;     /* Space below */
+    color: #ffffff;            /* Dark text over image */
+}
+
+/* Hero paragraph text */
+.hero p {
+    font-size: 1.2rem;         /* Subtitle size */
+    margin-bottom: 1.5rem;     /* Space before button */
+    color: #e4d5d5;            /* Dark readable color */
+}
+
+/* =====================================================
+   COMMON BUTTON STYLE
+   Purpose:
+   - Reusable button across site
+   ===================================================== */
+.btn {
+    background-color: #2E8B57; /* Green button background */
+    color: #fff;               /* White text */
+    padding: 12px 25px;        /* Button size */
+    text-decoration: none;     /* Remove underline */
+    border-radius: 5px;        /* Rounded corners */
+    font-weight: bold;         /* Bold text */
+    border: none;              /* Remove default border */
+    cursor: pointer;           /* Hand cursor */
+    transition: background-color 0.3s ease;
+    /* Smooth hover transition */
+}
+
+/* Button hover effect */
+.btn:hover {
+    background-color: #276a45; /* Darker green */
+}
+
+/* =====================================================
+   PRODUCTS SECTION
+   Purpose:
+   - Display products in card layout
+   ===================================================== */
+.products-section { 
+    padding: 60px 0;           /* Top & bottom spacing */
+    margin-bottom: 20px;    /* Space below section */
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+/* Products section heading */
+.products-section h2 {
+    text-align: center;        /* Center heading */
+    font-size: 2.5rem;         /* Large heading */
+    margin-bottom: 40px;       /* Space below */
+    color: #333;               /* Dark text */
+}
+
+/* Product grid layout */
+.product-grid {
+    display: grid;             /* Grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* auto-fit → responsive columns
+       minmax → min 250px, max flexible */
+    gap: 30px;                 /* Space between cards */
+    
+}
+
+/* Individual product card */
+.product-card {
+    background-color: #fff;    /* White card */
+    border-radius: 8px;        /* Rounded edges */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Card shadow */
+    text-align: center;        /* Center content */
+    padding: 20px;             /* Inner spacing */
+    transition: transform 0.3s ease;
+    display: flex;              /* NEW */
+    flex-direction: column;     /* NEW */
+    height: 100%;               /* NEW */
+}
+
+/* Product card hover effect */
+.product-card:hover {
+    transform: translateY(-5px);
+    /* Lift card upward */
+}
+
+/* Product image */
+.product-card img {
+    width: 100%;
+    height: 100px;              /* SAME height for all images */
+    object-fit: contain;        /* No image distortion */
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Product title */
+.product-card h3 {
+    font-size: 1.2rem;         /* Title size */
+    margin: 10px 0;            /* Vertical spacing */
+    margin-top: auto;              /* Push title down */
+}
+
+/* Product price text */
+.product-card .price {
+    font-size: 1.1rem;         /* Price size */
+    font-weight: bold;         /* Bold price */
+    color: #2E8B57;            /* Green price */
+    margin-bottom: 5px;       /* Space below */
+    margin-top: auto;
+}
+
+/* =====================================================
+   FOOTER SECTION
+   Purpose:
+   - Bottom information area
+   ===================================================== */
+
+/* Footer main wrapper */
+.footer {
+    background-color: #0f1010; /* Dark background */
+    color: #fff;               /* White text */
+    /* padding intentionally commented */
+    margin-top: 60px;          /* Space above footer */
+    width: 100%;               /* Full width */
+}
+
+/* Footer container */
+.footer .container{
+  text-align: center;          /* Center footer text */
+  padding: 10px;               /* Inner spacing */
+}
+
+/* Footer content grid */
+.footer-content {
+    display: grid;             /* Grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive footer columns */
+    gap: 40px;                 /* Space between columns */
+    margin-bottom: 30px;       /* Space below */
+}
+
+/* Footer section heading */
+.footer-section h3 {
+    color: #2E8B57;            /* Green heading */
+    margin-bottom: 20px;       /* Space below */
+    font-size: 1.2rem;         /* Heading size */
+}
+
+/* Footer text & links */
+.footer-section p,
+.footer-section a {
+    color: white;              /* White text */
+    text-decoration: none;     /* Remove underline */
+    line-height: 1.8;          /* Line spacing */
+    display: block;            /* Block layout */
+    margin-bottom: 8px;        /* Space below */
+}
+
+/* Footer link hover */
+.footer-section a:hover {
+    color: #2E8B57;            /* Green hover */
+}
+
+/* Footer bottom bar */
+.footer-bottom {
+    border-top:solid #34495e;  /* Top border */
+    text-align: center;        /* Center text */
+    display: inline;           /* Inline display */
+}
+
+/* Footer bottom text */
+.footer-bottom p {
+    color: #bdc3c7;            /* Light gray text */
+    font-size: 0.9rem;         /* Small text */
+}
+
+/* Footer container paragraph */
+.footer .container p{
+  color: white;                /* White text */
+}
+
+/* =====================================================
+   SOCIAL ICONS (FOOTER STYLE)
+   Purpose:
+   - Circular social media icons
+   ===================================================== */
+.social-links {
+    display: flex;             /* Horizontal layout */
+    gap: 15px;                 /* Space between icons */
+    margin-top: 15px;          /* Space above */
+}
+
+/* Social icon style */
+.social-links a {
+    display: inline-block;     /* Allow width & height */
+    width: 40px;               /* Icon width */
+    height: 40px;              /* Icon height */
+    background-color: #34495e; /* Dark gray background */
+    border-radius: 50%;        /* Circular shape */
+    text-align: center;        /* Center icon horizontally */
+    line-height: 40px;         /* Center icon vertically */
+    transition: background-color 0.3s ease;
+}
+
+/* Social icon hover */
+.social-links a:hover {
+    background-color: #52b788; /* Lighter green hover background */
+}
+

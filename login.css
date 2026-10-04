@@ -1,0 +1,263 @@
+/* =====================================================
+   HEADER VARIANT
+   Purpose:
+   - Alternative header styling
+   ===================================================== */
+.header1 {
+    background: linear-gradient(135deg, #2d6a4f 0%, #52b788 100%); /* Same green gradient color */
+    padding : 20px;           /* Larger padding */
+}
+
+.logo{
+    font-weight: bold;        /* Bold brand text */
+    color: White;             /* White text */
+    text-decoration: none;    /* Remove underline */
+    cursor: pointer;          /* Hand cursor */
+    font-size: 1.5rem;        /* Logo text size */
+}
+
+/* =====================================================
+   LOGIN PAGE STYLING
+   ===================================================== */
+
+/* ---------------------*/
+/* Login Page Styling   */
+/* -------------------- */
+/* ===== Colorful Login Page ===== */
+
+/* =====================================================
+   LOGIN SECTION
+   Purpose:
+   - Full screen login page
+   - Center login container
+   ===================================================== */
+.login-section {
+  height: 100vh;              /* Full viewport height */
+  display: flex;              /* Flexbox layout */
+  justify-content: center;    /* Center horizontally */
+  align-items: center;        /* Center vertically */
+  background: linear-gradient(120deg, #a1c4fd, #c2e9fb);
+  /* Blue gradient background */
+}
+
+/* =====================================================
+   LOGIN CONTAINER
+   Purpose:
+   - Main login card holding left & right sections
+   ===================================================== */
+.login-container {
+  display: grid;              /* Grid layout */
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  width: 90%;                 /* Responsive width */
+  max-width: 1000px;          /* Max width */
+  border-radius: 15px;        /* Rounded edges */
+  overflow: hidden;           /* Hide overflow */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  background: #fff;           /* White background */
+}
+
+/* =====================================================
+   LOGIN LEFT SIDE (INFO / BRANDING)
+   ===================================================== */
+.login-left {
+  background: linear-gradient(135deg, #1e88e5, #00bfa5, #ffb300);
+  color: #fff;                /* White text */
+  padding: 70px 40px;         /* Inner spacing */
+  display: flex;              /* Flex layout */
+  flex-direction: column;     /* Vertical stacking */
+  justify-content: center;    /* Vertical center */
+  text-align: left;           /* Left-aligned text */
+  animation: gradientMove 6s ease infinite alternate;
+  background-size: 300% 300%;
+}
+
+/* =====================================================
+   LOGIN LEFT BACKGROUND ANIMATION
+   ===================================================== */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }   /* Start position */
+  100% { background-position: 100% 50%; } /* End position */
+}
+
+/* =====================================================
+   LOGIN LEFT HEADING
+   ===================================================== */
+.login-left h1 {
+  font-size: 2.8rem;           /* Large heading */
+  line-height: 1.3;            /* Line spacing */
+  margin-bottom: 20px;         /* Space below */
+}
+
+/* Highlighted word */
+.login-left span {
+  color: #ffeb3b;              /* Yellow highlight */
+}
+
+/* Login left paragraph */
+.login-left p {
+  font-size: 1.1rem;           /* Medium text */
+  opacity: 0.95;               /* Slight transparency */
+  font-weight: 500;            /* Medium bold */
+}
+
+/* =====================================================
+   LOGIN RIGHT SIDE (FORM AREA)
+   ===================================================== */
+.login-right {
+  background: #fdfdfd;         /* Light background */
+  padding: 60px 40px;          /* Inner spacing */
+  display: flex;               /* Flex layout */
+  align-items: center;         /* Vertical center */
+  justify-content: center;     /* Horizontal center */
+}
+
+/* =====================================================
+   LOGIN FORM BOX
+   ===================================================== */
+.login-box {
+  width: 100%;                 /* Full width */
+  max-width: 350px;            /* Form width limit */
+}
+
+/* =====================================================
+   LOGIN FORM HEADING
+   ===================================================== */
+.login-box h2 {
+  text-align: center;          /* Center heading */
+  color: #1e88e5;              /* Blue color */
+  margin-bottom: 25px;         /* Space below */
+  font-size: 2rem;             /* Heading size */
+}
+
+/* =====================================================
+   LOGIN FORM LAYOUT
+   ===================================================== */
+.login-box form {
+  display: flex;               /* Flexbox */
+  flex-direction: column;      /* Vertical form */
+}
+
+/* =====================================================
+   LOGIN FORM LABELS
+   ===================================================== */
+.login-box label {
+  margin-bottom: 5px;          /* Space below label */
+  color: #333;                 /* Dark text */
+  font-weight: 600;            /* Semi bold */
+}
+
+/* =====================================================
+   LOGIN INPUT FIELDS
+   ===================================================== */
+.login-box input {
+  padding: 12px;               /* Inner padding */
+  margin-bottom: 18px;         /* Space between fields */
+  border: 1.5px solid #ccc;    /* Border */
+  border-radius: 6px;          /* Rounded corners */
+  font-size: 1rem;             /* Normal text size */
+  transition: border 0.3s;     /* Smooth focus effect */
+}
+
+/* Input focus state */
+.login-box input:focus {
+  border-color: #1e88e5;       /* Blue border */
+  outline: none;               /* Remove default outline */
+}
+
+/* =====================================================
+   LOGIN BUTTON
+   Purpose:
+   - Main call-to-action button for form submission
+   - Gradient orange-red background with smooth transitions
+   ===================================================== */
+.login-box .btn {
+  background: linear-gradient(90deg, #ff9800, #ff5722);
+  /* Orange to red gradient for vibrant CTA appearance */
+  color: #fff;
+  /* White text for contrast against gradient */
+  border: none;
+  /* Remove default browser border */
+  border-radius: 8px;
+  /* Slightly rounded corners for modern look */
+  padding: 12px;
+  /* Inner spacing for button content */
+  font-size: 1.1rem;
+  /* Slightly larger text for readability */
+  cursor: pointer;
+  /* Hand cursor on hover to indicate clickability */
+  font-weight: bold;
+  /* Bold text for emphasis */
+  transition: transform 0.3s, background 0.3s;
+  /* Smooth animation for hover effects (scale & color) */
+}
+
+/* =====================================================
+   LOGIN BUTTON HOVER STATE
+   Purpose:
+   - Provide visual feedback when user hovers over button
+   - Scale up and change gradient for interactive feel
+   ===================================================== */
+.login-box .btn:hover {
+  transform: scale(1.05);
+  /* Enlarge button by 5% on hover for tactile feedback */
+  background: linear-gradient(90deg, #ffb300, #ff7043);
+  /* Lighter gradient on hover for visual distinction */
+}
+
+/* =====================================================
+   LOGIN HELPER TEXT
+   Purpose:
+   - Text below login form (e.g., "Don't have an account?")
+   - Center-aligned with proper spacing
+   ===================================================== */
+.login-box p {
+  text-align: center;
+  /* Center align helper text */
+  margin-top: 15px;
+  /* Space above text from form fields */
+}
+/* =====================================================
+   LOGIN LINKS
+   Purpose:
+   - Styling for "Sign Up" or "Forgot Password" links
+   - Blue color to match brand theme
+   ===================================================== */
+.login-box a {
+  color: #1e88e5;
+  /* Blue color consistent with login heading */
+  text-decoration: none;
+  /* Remove default link underline */
+  font-weight: 500;
+  /* Medium bold for emphasis */
+}
+
+/* =====================================================
+   LOGIN LINK HOVER STATE
+   Purpose:
+   - Provide visual feedback on link interaction
+   - Underline appears on hover for clarity
+   ===================================================== */
+.login-box a:hover {
+  text-decoration: underline;
+  /* Show underline on hover for better UX */
+}
+
+/* =====================================================
+   LOGIN PAGE — RESPONSIVE DESIGN
+   Purpose:
+   - Adjust login layout for tablets & mobiles
+   ===================================================== */
+@media (max-width: 768px) {
+
+  .login-container {
+    grid-template-columns: 1fr; /* Switch to single column */
+  }
+
+  .login-left {
+    display: none;             /* Hide left branding section */
+  }
+
+  .login-right {
+    padding: 40px 20px;        /* Reduce padding on small screens */
+  }
+}

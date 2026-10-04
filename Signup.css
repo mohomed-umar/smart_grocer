@@ -1,0 +1,223 @@
+/* =====================================================
+   SIGNUP PAGE STYLING
+   Purpose:
+   - Full screen signup page with colorful UI
+   ===================================================== */
+
+/* ===== Colorful Signup Page ===== */
+.signup-section {
+  min-height: 100vh;           /* Minimum viewport height */
+  display: flex;               /* Flexbox for centering */
+  justify-content: center;     /* Horizontal center */
+  align-items: center;         /* Vertical center */
+  background: linear-gradient(120deg, #fbc2eb, #a6c1ee);
+  /* Pink + blue gradient background */
+  padding: 20px;               /* Add padding to prevent edge cutoff */
+  overflow-x: hidden;          /* Prevent horizontal scroll */
+}
+
+/* =====================================================
+   SIGNUP CONTAINER
+   Purpose:
+   - Card that holds left info & right form
+   ===================================================== */
+.signup-container {
+  display: grid;               /* Grid layout */
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  width: 100%;                 /* Full responsive width */
+  max-width: 1000px;           /* Max width */
+  border-radius: 15px;         /* Rounded edges */
+  overflow: hidden;            /* Hide overflow */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  background: #fff;            /* White background */
+}
+
+/* =====================================================
+   SIGNUP LEFT SIDE (INFO SECTION)
+   ===================================================== */
+.signup-left {
+  background: linear-gradient(135deg, #1e88e5, #00bfa5, #ffb300);
+  color: #fff;                 /* White text */
+  padding: 70px 40px;          /* Inner spacing */
+  display: flex;               /* Flex layout */
+  flex-direction: column;      /* Vertical stacking */
+  justify-content: center;     /* Vertical center */
+  animation: gradientFlow 6s ease infinite alternate;
+  background-size: 300% 300%;  /* Required for animation */
+}
+
+/* =====================================================
+   SIGNUP BACKGROUND ANIMATION
+   ===================================================== */
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }   /* Start */
+  100% { background-position: 100% 50%; } /* End */
+}
+
+/* =====================================================
+   SIGNUP LEFT HEADING
+   ===================================================== */
+.signup-left h1 {
+  font-size: 2.8rem;           /* Large heading */
+  line-height: 1.3;            /* Line spacing */
+  margin-bottom: 20px;         /* Space below */
+}
+
+/* Highlighted word */
+.signup-left span {
+  color: #ffeb3b;              /* Yellow highlight */
+}
+
+/* Signup left paragraph */
+.signup-left p {
+  font-size: 1.1rem;           /* Medium text */
+  opacity: 0.95;               /* Slight transparency */
+  font-weight: 500;            /* Medium bold */
+}
+
+/* =====================================================
+   SIGNUP RIGHT SIDE (FORM AREA)
+   ===================================================== */
+.signup-right {
+  background: #fafafa;         /* Light gray background */
+  padding: 60px 40px;          /* Inner spacing */
+  display: flex;               /* Flex layout */
+  align-items: center;         /* Vertical center */
+  justify-content: center;     /* Horizontal center */
+}
+
+/* =====================================================
+   SIGNUP FORM BOX
+   ===================================================== */
+.signup-box {
+  width: 100%;                 /* Full width */
+  max-width: 350px;            /* Form width limit */
+}
+
+/* =====================================================
+   SIGNUP FORM HEADING
+   ===================================================== */
+.signup-box h2 {
+  text-align: center;          /* Center heading */
+  color: #ff4081;              /* Pink color */
+  margin-bottom: 25px;         /* Space below */
+  font-size: 2rem;             /* Heading size */
+}
+
+/* =====================================================
+   SIGNUP FORM LAYOUT
+   ===================================================== */
+.signup-box form {
+  display: flex;               /* Flexbox */
+  flex-direction: column;      /* Vertical form */
+}
+
+/* =====================================================
+   SIGNUP FORM LABELS
+   ===================================================== */
+.signup-box label {
+  margin-bottom: 5px;          /* Space below label */
+  color: #333;                 /* Dark text */
+  font-weight: 600;            /* Semi bold */
+}
+
+/* =====================================================
+   SIGNUP INPUT FIELDS
+   ===================================================== */
+.signup-box input {
+  padding: 12px;               /* Inner padding */
+  margin-bottom: 18px;         /* Space between inputs */
+  border: 1.5px solid #ccc;    /* Border */
+  border-radius: 6px;          /* Rounded corners */
+  font-size: 1rem;             /* Normal text size */
+  transition: border 0.3s;     /* Smooth focus effect */
+}
+
+/* Input focus state */
+.signup-box input:focus {
+  border-color: #ff4081;       /* Pink border */
+  outline: none;               /* Remove default outline */
+}
+
+/* =====================================================
+   SIGNUP BUTTON
+   ===================================================== */
+.signup-box .btn {
+  background: linear-gradient(90deg, #ff9800, #ff5722);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.3s, background 0.3s;
+}
+
+/* Signup button hover */
+.signup-box .btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #ffb300, #ff7043);
+}
+
+/* Signup helper text */
+.signup-box p {
+  text-align: center;
+  margin-top: 15px;
+}
+
+/* Signup links */
+.signup-box a {
+  color: #ff4081;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Signup link hover */
+.signup-box a:hover {
+  text-decoration: underline;
+}
+
+
+/* =====================================================
+   SIGNUP PAGE — RESPONSIVE DESIGN
+   Purpose:
+   - Mobile friendly signup layout
+   ===================================================== */
+@media (max-width: 768px) {
+
+  .signup-section {
+    padding: 10px;             /* Reduce padding on mobile */
+    min-height: auto;          /* Allow natural height */
+  }
+
+  .signup-container {
+    grid-template-columns: 1fr; /* Single column */
+  }
+
+  .signup-left {
+    display: none;             /* Hide left section */
+  }
+
+  .signup-right {
+    padding: 40px 20px;        /* Reduce padding */
+  }
+
+  .signup-left h1 {
+    font-size: 2rem;           /* Reduce heading size */
+  }
+
+  .signup-box {
+    max-width: 100%;           /* Full width on mobile */
+  }
+}
+/* =====================================================
+   SITE LOGO IMAGE (CIRCULAR)
+   ===================================================== */
+.site-logo {
+    width: 100px;             /* Image width */
+    height: 100px;            /* Image height */
+    object-fit: cover;        /* Prevent image distortion */
+    border-radius: 50%;       /* Make image circular */
+    border: 2px solid white;  /* White border */
+}
